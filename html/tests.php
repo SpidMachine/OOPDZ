@@ -111,9 +111,9 @@ test(
 $form = new Form();
 
 test(
-    "<form action='1.php' method='GET'><input type='text' name='name' value='admin'></form>",
+    "<Core action='1.php' method='GET'><input type='text' name='name' value='admin'></Core>",
     $form->setAction('1.php')->setMethod('GET')->setContent((new Input())->setType('text')->setName('name')->setValue('admin')->html())->html(),
-    "<form>"
+    "<Core>"
 );
 
 

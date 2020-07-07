@@ -47,9 +47,9 @@ echo $ol
 
 echo "<br>";
 
-// $form = new Form();
+// $Core = new Form();
 
-// echo $form
+// echo $Core
 //     ->setAction("index2.php")
 //     ->setMethod("POST")
 //     ->html();

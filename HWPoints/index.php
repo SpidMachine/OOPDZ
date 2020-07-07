@@ -51,8 +51,8 @@ $rect
 // echo $rect->getPerimeter() . "<br>";
 
 // $tr = new Triangle(
-//     new Point(3, 3),
-//     new Point(1, 1)
+//     new PointPattern(3, 3),
+//     new PointPattern(1, 1)
 // );
 
 // echo $tr->getPerimeter() . "<br>";
@@ -60,9 +60,9 @@ $rect
 
 //$tr2 = new Triangle2();
 //
-//$pointA = new Point(0, 4);
-//$pointB = new Point(2, 0);
-//$pointC = new Point(0, 0);
+//$pointA = new PointPattern(0, 4);
+//$pointB = new PointPattern(2, 0);
+//$pointC = new PointPattern(0, 0);
 //
 //$tr2
 //    ->setPointA($pointA)
@@ -78,8 +78,8 @@ $rect
 ////echo $tr3->getPerimeter();
 //
 //$rectangleArbitrary = new RectangleArbitrary();
-//$pointA = new Point(10, 10);
-//$pointB = new Point(15, 5);
+//$pointA = new PointPattern(10, 10);
+//$pointB = new PointPattern(15, 5);
 //
 //$rectangleArbitrary
 //    ->setPointA($pointA)

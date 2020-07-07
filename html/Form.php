@@ -35,6 +35,6 @@ class Form extends PairTag
 
     public function html()
     {
-        return "<form action='$this->action' method='$this->method'>\n$this->content</form>";
+        return "<Core action='$this->action' method='$this->method'>\n$this->content</Core>";
     }
 }
