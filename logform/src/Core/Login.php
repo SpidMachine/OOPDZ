@@ -24,41 +24,20 @@ class Login
         );
     }
 
-    public function userCheck(string $login, string $password): bool
-    {
-        return !empty($this->table->runSQL(
-            'SELECT*FROM form WHERE login="' . $login . '" AND password="' . $password . '"'
-        ));
-    }
-
-    public function userCheck(string $login, string $password): bool
-    {
-        return !empty($this->table->runSQL(
-            'SELECT*FROM form WHERE login="' . $login . '" AND password="' . $password . '"'
-        ));
-    }
-
-//    public function check()
+//    public function userCheck(string $login, string $password): bool
 //    {
-//        if (!empty($_REQUEST['password']) and !empty($_REQUEST['login'])) {
-//            $login = $_REQUEST['login'];
-//            $password = $_REQUEST['password'];
-//
-////    $query = new DbEntity(Config::MYSQL_TABLE,QueryBuilderTrait::setSelect('*')::setFrom('form'));
-////    $query->setSelect('*')->setFrom('form')->setWhere('login="' . $login . '" AND password="' . $password . '"'));
-//            $query = 'SELECT*FROM form WHERE login="' . $login . '" AND password="' . $password . '"';
-//            $result = mysqli_query(DB::Link(['host' => Config::MYSQL_HOST,
-//                'username' => Config::MYSQL_USER_NAME,
-//                'password' => Config::MYSQL_PASSWORD,
-//                'dbname' => Config::MYSQL_DATABASE]), $query);
-//            $user = mysqli_fetch_assoc($result);
-//
-//            if (!empty($user)) {
-//                echo "Добро пожаловать!";
-//            } else {
-//                echo "Вы неверно ввели логин или пароль";
-//            }
-//        }
+//        return !empty($this->table->runSQL(
+//            'SELECT*FROM form WHERE login="' . $login . '" AND password="' . $password . '"'
+//        ));
 //    }
+
+    public function userCheck2(string $login, string $password): bool
+    {
+        return !empty($this
+            ->table
+            ->setWhere('login="' . $login . '" AND password="' . $password . '"')
+            ->get()
+        );
+    }
 
 }

@@ -1,5 +1,9 @@
 <?php
 include "../vendor/autoload.php";
+
+use Core\Login;
+
+(new Login())->userCheck2('pavel', '1234');
 ?>
 
 
@@ -16,7 +20,7 @@ include "../vendor/autoload.php";
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<?= !empty($_POST) && (new Core\Login())->userCheck($_POST['login'], $_POST['password']) ? 'Да' : 'Нет' ?>
+<?= !empty($_POST) && (new Login())->userCheck($_POST['login'], $_POST['password']) ? 'Да' : 'Нет' ?>
 <form action='?' method='POST'>
     <div class="form-group">
         <label for="formGroupExampleInput">Login</label>
